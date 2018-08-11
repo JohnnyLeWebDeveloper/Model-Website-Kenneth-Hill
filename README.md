@@ -1,1 +1,1 @@
-# Model Website for Kennth Hill.
+# Model Website for Kenneth Hill.
