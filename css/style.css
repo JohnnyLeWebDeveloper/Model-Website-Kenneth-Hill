@@ -331,16 +331,37 @@ a:visited {
   flex-direction: row;
 }
 
-.positionAbsolute {
-  position: absolute;
-}
-
 .rel {
   position: relative;
 }
 
 .clear {
   clear: both;
+}
+
+.bgImage{
+    position: relative;
+    width: 100%;
+    background-size: cover;
+    background-position: top center;
+}
+
+.placement {
+    position: relative;
+    width: 100%;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    height: 100%;
+}
+
+.imageAbove {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    filter: alpha(opacity=0);
+    opacity: 0;
 }
 
 .linearAnimation {
@@ -480,7 +501,9 @@ header #site-name {
   margin-right: -20px;
 }
 
-.site-alignment-center #topNav nav, .site-alignment-center #topNav ul, .site-alignment-center #topNav li {
+.site-alignment-center #topNav nav,
+.site-alignment-center #topNav ul,
+.site-alignment-center #topNav li {
   display: inline;
   float: none;
 }
@@ -516,7 +539,9 @@ header #site-name {
   width: 100%;
 }
 
-.site-alignment-center #topNav nav, .site-alignment-center #topNav ul, .site-alignment-center #topNav li {
+.site-alignment-center #topNav nav,
+.site-alignment-center #topNav ul,
+.site-alignment-center #topNav li {
   display: inline;
   float: none;
 }
@@ -607,7 +632,6 @@ a, a:visited {
   text-transform: normal;
   font-size: 36px;
   letter-spacing: 0px;
-  /* font-family: calluna-sans; */
   font-weight: 400;
   font-style: normal;
   line-height: 1.4em;
@@ -759,6 +783,47 @@ a, a:visited {
 
 .titleMessage .heading .sub {
   font-size: 23px;
+}
+
+.galleryContainer {
+  max-width: 1140px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 15px;
+}
+
+#galleryContainer {
+	position: relative;
+	margin: 0 auto 10px;
+}
+
+@media (min-width: 1200px) {
+  #galleryContainer {
+  	padding: 20px;
+  }
+}
+
+.galleryBox {
+	box-sizing: border-box;
+	position: relative;
+	width: 50%;
+	margin: -2px -2px;
+	display: inline-block;
+	padding: 5px;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+@media (min-width: 980px) {
+	.galleryBox {
+    width: 33%;
+	}
+}
+
+@media (min-width: 1200px) {
+	.galleryBox {
+    width: 25%;
+	}
 }
 
 /*______________________FOOTER______________________*/
