@@ -1,3 +1,1 @@
-# Johnny-Le-Portfolio-Website
-My portfolio website :)
-https://johnnyle2017.github.io/Johnny-Le-Portfolio-Website/
+# Model Website for Kennth Hill.
