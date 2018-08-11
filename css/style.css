@@ -626,6 +626,7 @@ a, a:visited {
 
 .logo {
   margin: 0;
+  margin-bottom: 3%;
   font-family: Varela Round, Helvetica, arial, sans-serif;
   font-weight: normal;
   line-height: 1.2em;
