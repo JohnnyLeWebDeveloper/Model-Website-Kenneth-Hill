@@ -1,94 +1,57 @@
-$(document).ready(function(){
 
-  $('#slides').superslides({
-    animation: 'fade',
-    play: 4000,
-    pagination: false
-  });
+$(document).ready(function() {
 
-  const typed = new Typed(".typed",{
-    strings: ["MODEL", "CHI | ATL | NY | LA | MA"],
-    typeSpeed: 70, loop: true, startDelay: 1000,
+});
+
+$(document).ready(function() {
+  $('#slides').superslides({animation: 'fade', play: 4000, pagination: false});
+});
+
+$(document).ready(function() {
+  const typed = new Typed(".typed", {
+    strings: [
+      "MODEL", "CHI | ATL | NY | LA | MA"
+    ],
+    typeSpeed: 70,
+    loop: true,
+    startDelay: 1000,
     showCursor: false
   });
+});
 
+$(document).ready(function() {
   $('.owl-carousel').owlCarousel({
-      loop:true,
-      items: 4,
-      responsive:{
-          0:{
-              items:1
-          },
-          480:{
-              items:2
-          },
-          768:{
-              items:3
-          },
-          938:{
-            items:4
-          }
+    loop: true,
+    items: 4,
+    responsive: {
+      0: {
+        items: 1
+      },
+      480: {
+        items: 2
+      },
+      768: {
+        items: 3
+      },
+      938: {
+        items: 4
       }
+    }
   });
+});
 
-
-  // Used to ensure chart percentage shows as users scroll down website to see skills section
-  const skillsTopOffset = $(".skillsSection").offset().top;
-  const statsTopOffset = $(".statsSection").offset().top;
-  const countUpFinished = false;
-
-  $(window).scroll(function(){
-    if(window.pageYOffset > skillsTopOffset - $(window).height() + 200) {
-        $('.chart').easyPieChart({
-      easing: 'easeInOut',
-      barColor: '#fff',
-      trackColor: false,
-      scaleColor: false,
-      lineWidth: 4,
-      size: 152,
-      onStep: function(from, to, percent) {
-        $(this.el).find('.percent').text(Math.round(percent));
-      }
+$(document).ready(function() {
+    $("#mobileMenuLink").on("click", function() {
+        $("#mobileNav").slideToggle();
     });
-    }
-
-    // Code is ran when count up is not true
-    if(!countUpFinished && window.pageYOffset > statsTopOffset - $(window).height() + 200) {
-      // jQuery for Counter to count up
-      $(".counter").each(function(){
-        let element = $(this);
-        let endVal = parseInt(element.text());
-        element.countup(endVal);
-      })
-
-      countUpFinished = true;
-    }
-
-  });
-
-  // Smooth transition when clicking on nav links
-  $("#navigation li a").click(function(e){
-    e.preventDefault();
-    const targetElement = $(this).attr("href");
-    const targetPosition = $(targetElement).offset().top;
-    $("html, body").animate({ scrollTop: targetPosition - 50 }, "slow")
-  });
-
-  // Makes navigation bar stick to the top of menu
-  const nav = $("#navigation");
-  const navTop = nav.offset().top;
-
-  $(window).on("scroll", stickyNavigation);
-
-  function stickyNavigation() {
-    const body = $("body");
-    if($(window).scrollTop() >= navTop) {
-      body.css("padding-top", nav.outerHeight() + "px");
-      body.addClass("fixedNav");
-    } else {
-      body.css("padding-top", 0);
-      body.removeClass("fixedNav");
-    }
-  }
-
+    $("#mobileNav nav ul li").on("click", function() {
+        if ($(this).find(".subnav").length > 0) {
+            if ($(this).find(".subnav").css("display") == "none") {
+                $("#mobileNav nav ul li .subnav").css("display", "none")
+                $(this).find(".subnav").slideDown(1000);
+            } else {
+                //$(this).find(".subnav").slideToggle();
+            }
+        }
+    });
 });
