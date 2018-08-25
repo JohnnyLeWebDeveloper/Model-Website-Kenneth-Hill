@@ -144,65 +144,6 @@ a:visited {
     opacity: 0;
 }
 
-.linearAnimation {
-  -webkit-animation: moveBg 100s linear infinite;
-  -moz-animation: moveBg 100s linear infinite;
-  -o-animation: moveBg 100s linear infinite;
-  animation: moveBg 100s linear infinite;
-}
-
-@-webkit-keyframes moveBg {
-  from {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  to {
-    -webkit-transform: translateX(-550px);
-    transform: translateX(-550px);
-  }
-}
-
-@-moz-keyframes moveBg {
-  from {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    transform: translateX(0);
-  }
-  to {
-    -webkit-transform: translateX(-550px);
-    -moz-transform: translateX(-550px);
-    transform: translateX(-550px);
-  }
-}
-
-@-o-keyframes moveBg {
-  from {
-    -webkit-transform: translateX(0);
-    -o-transform: translateX(0);
-    transform: translateX(0);
-  }
-  to {
-    -webkit-transform: translateX(-550px);
-    -o-transform: translateX(-550px);
-    transform: translateX(-550px);
-  }
-}
-
-@keyframes moveBg {
-  from {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -o-transform: translateX(0);
-    transform: translateX(0);
-  }
-  to {
-    -webkit-transform: translateX(-550px);
-    -moz-transform: translateX(-550px);
-    -o-transform: translateX(-550px);
-    transform: translateX(-550px);
-  }
-}
-
 /* ------------------------- TRANSITIONS -------------------------- */
 
 .effect1 {
