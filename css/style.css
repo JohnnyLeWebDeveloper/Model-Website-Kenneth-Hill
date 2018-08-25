@@ -509,49 +509,41 @@ a, a:visited {
 
 /* ------------------------- GRID SYSTEM -------------------------- */
 
-/* Full IE10 Support for Usage of CSS Columns */
-
-/* https://developer.mozilla.org/en-US/docs/Web/CSS/column-count */
-
-.columns {
-  -webkit-columns: 4;
-  -moz-columns: 4;
-  columns: 4;
-  margin: 0 auto;
-  max-width: 2000px;
-  -webkit-column-width: 220px;
-  -moz-column-width: 220px;
-  column-width: 220px;
-  -webkit-column-gap: 8px;
-  -moz-column-gap: 8px;
-  column-gap: 8px;
-  padding: 8px;
+.grid {
+display: -ms-grid;
+display: grid;
+-ms-grid-columns: 1fr;
+grid-template-columns: 1fr;
+grid-gap: 8px;
+padding: 10px;
 }
 
 @media (min-width: 768px) {
-  .columns {
-    -webkit-column-gap: 10px;
-    -moz-column-gap: 10px;
-    column-gap: 10px;
-  }
+	.grid {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
+    padding: 15px;
+ }
 }
 
 @media (min-width: 980px) {
-  .columns {
-    -webkit-column-gap: 15px;
-    -moz-column-gap: 15px;
-    column-gap: 15px;
-  }
+	.grid {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
+ }
 }
 
-.bgImage {
-  margin-bottom: 5px;
-}
-
-@media (min-width: 980px) {
-  .bgImage {
-    margin-bottom: 12px;
-  }
+@media (min-width: 1200px) {
+	.grid {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+ }
 }
 
 /*______________________FOOTER______________________*/
