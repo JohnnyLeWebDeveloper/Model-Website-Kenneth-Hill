@@ -507,45 +507,51 @@ a, a:visited {
   font-size: 23px;
 }
 
-.galleryContainer {
-  max-width: 1140px;
+/* ------------------------- GRID SYSTEM -------------------------- */
+
+/* Full IE10 Support for Usage of CSS Columns */
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/column-count */
+
+.columns {
+  -webkit-columns: 4;
+  -moz-columns: 4;
+  columns: 4;
   margin: 0 auto;
-  text-align: center;
-  padding: 15px;
+  max-width: 2000px;
+  -webkit-column-width: 220px;
+  -moz-column-width: 220px;
+  column-width: 220px;
+  -webkit-column-gap: 8px;
+  -moz-column-gap: 8px;
+  column-gap: 8px;
+  padding: 8px;
 }
 
-#galleryContainer {
-	position: relative;
-	margin: 0 auto 10px;
-}
-
-@media (min-width: 1200px) {
-  #galleryContainer {
-  	padding: 20px;
+@media (min-width: 768px) {
+  .columns {
+    -webkit-column-gap: 10px;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
   }
 }
 
-.galleryBox {
-	box-sizing: border-box;
-	position: relative;
-	width: 50%;
-	margin: -2px -2px;
-	display: inline-block;
-	padding: 5px;
-	overflow: hidden;
-	cursor: pointer;
+@media (min-width: 980px) {
+  .columns {
+    -webkit-column-gap: 15px;
+    -moz-column-gap: 15px;
+    column-gap: 15px;
+  }
+}
+
+.bgImage {
+  margin-bottom: 5px;
 }
 
 @media (min-width: 980px) {
-	.galleryBox {
-    width: 33%;
-	}
-}
-
-@media (min-width: 1200px) {
-	.galleryBox {
-    width: 25%;
-	}
+  .bgImage {
+    margin-bottom: 12px;
+  }
 }
 
 /*______________________FOOTER______________________*/
